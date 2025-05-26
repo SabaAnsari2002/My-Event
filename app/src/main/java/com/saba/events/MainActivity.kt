@@ -36,6 +36,7 @@ class MainActivity : AppCompatActivity() {
         val sharedPrefs = getSharedPreferences("events", MODE_PRIVATE)
         events.clear()
         events.addAll(sharedPrefs.all.map { "${it.key}: ${it.value}" })
-        listView.adapter = ArrayAdapter(this, android.R.layout.simple_list_item_1, events)
+        val adapter = ArrayAdapter(this, R.layout.list_item_event, R.id.tvEventTitle, events)
+        listView.adapter = adapter
     }
 }
