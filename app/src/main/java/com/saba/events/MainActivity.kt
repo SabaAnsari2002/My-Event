@@ -6,12 +6,14 @@ import android.widget.ArrayAdapter
 import android.widget.Button
 import android.widget.ListView
 import androidx.appcompat.app.AppCompatActivity
+import java.util.Date
 
 class MainActivity : AppCompatActivity() {
 
     private lateinit var btnAddEvent: Button
     private lateinit var listView: ListView
     private val events = mutableListOf<String>()
+    data class Event(val title: String, val date: Date)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -34,9 +36,18 @@ class MainActivity : AppCompatActivity() {
 
     private fun loadEvents() {
         val sharedPrefs = getSharedPreferences("events", MODE_PRIVATE)
-        events.clear()
-        events.addAll(sharedPrefs.all.map { "${it.key}: ${it.value}" })
-        val adapter = ArrayAdapter(this, R.layout.list_item_event, R.id.tvEventTitle, events)
+        val eventList = sharedPrefs.all.mapNotNull { entry ->
+            val title = entry.key
+            val dateString = entry.value as? String ?: return@mapNotNull null
+            try {
+                val date = Date(dateString)
+                Event(title, date)
+            } catch (e: Exception) {
+                null
+            }
+        }.sortedByDescending { it.date }
+
+        val adapter = EventAdapter(this, eventList)
         listView.adapter = adapter
     }
 }
