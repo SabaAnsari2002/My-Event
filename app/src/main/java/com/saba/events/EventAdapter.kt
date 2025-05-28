@@ -30,6 +30,21 @@ class EventAdapter(private val context: Context, private val events: List<MainAc
         tvTitle.text = event.title
         tvTime.text = dateFormat.format(event.date)
 
+        // Check if the event has passed
+        if (event.date.before(Date())) {
+            // Style for past event
+            tvTitle.setTextColor(context.getColor(android.R.color.darker_gray))
+            tvTime.setTextColor(context.getColor(android.R.color.darker_gray))
+            rowView.alpha = 0.5f
+            rowView.setBackgroundResource(R.drawable.bg_event_past)
+        } else {
+            // Style for upcoming event
+            tvTitle.setTextColor(context.getColor(android.R.color.black))
+            tvTime.setTextColor(context.getColor(android.R.color.black))
+            rowView.alpha = 1f
+            rowView.setBackgroundResource(R.drawable.bg_event_upcoming)
+        }
+
         return rowView
     }
 }

@@ -2,17 +2,16 @@ package com.saba.events
 
 import android.content.Intent
 import android.os.Bundle
-import android.widget.ArrayAdapter
 import android.widget.Button
 import android.widget.ListView
 import androidx.appcompat.app.AppCompatActivity
-import java.util.Date
+import java.text.SimpleDateFormat
+import java.util.*
 
 class MainActivity : AppCompatActivity() {
 
     private lateinit var btnAddEvent: Button
     private lateinit var listView: ListView
-    private val events = mutableListOf<String>()
     data class Event(val title: String, val date: Date)
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -36,12 +35,14 @@ class MainActivity : AppCompatActivity() {
 
     private fun loadEvents() {
         val sharedPrefs = getSharedPreferences("events", MODE_PRIVATE)
+        val sdf = SimpleDateFormat("EEE MMM dd HH:mm:ss z yyyy", Locale.ENGLISH)
+
         val eventList = sharedPrefs.all.mapNotNull { entry ->
             val title = entry.key
             val dateString = entry.value as? String ?: return@mapNotNull null
             try {
-                val date = Date(dateString)
-                Event(title, date)
+                val date = sdf.parse(dateString)
+                if (date != null) Event(title, date) else null
             } catch (e: Exception) {
                 null
             }
