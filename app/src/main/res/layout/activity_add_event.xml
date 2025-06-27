@@ -2,7 +2,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="24dp"
+    android:padding="28dp"
     android:background="@drawable/bg_gradient">
 
     <EditText
@@ -11,11 +11,11 @@
         android:layout_height="wrap_content"
         android:hint="نام مناسبت"
         android:background="@drawable/edittext_rounded"
-        android:padding="16dp"
-        android:textColor="#4A148C"
-        android:textColorHint="#D1C4E9"
-        android:textSize="16sp"
-        android:layout_marginBottom="16dp"
+        android:padding="18dp"
+        android:textColor="#2D4F2B"
+        android:textColorHint="#FFB823"
+        android:textSize="17sp"
+        android:layout_marginBottom="18dp"
         android:fontFamily="sans-serif" />
 
     <Button
@@ -24,11 +24,12 @@
         android:layout_height="wrap_content"
         android:text="📅 انتخاب تاریخ"
         android:layout_marginBottom="12dp"
-        android:padding="14dp"
-        android:background="@drawable/btn_purple_rounded"
-        android:textColor="#FFFFFF"
+        android:padding="15dp"
+        android:background="@drawable/btn_yellow_rounded"
+        android:textColor="#2D4F2B"
         android:fontFamily="sans-serif-medium"
-        android:textAllCaps="false" />
+        android:textAllCaps="false"
+        android:elevation="2dp" />
 
     <Button
         android:id="@+id/btnSelectTime"
@@ -36,21 +37,23 @@
         android:layout_height="wrap_content"
         android:text="⏰ انتخاب زمان"
         android:layout_marginBottom="12dp"
-        android:padding="14dp"
-        android:background="@drawable/btn_purple_rounded"
-        android:textColor="#FFFFFF"
+        android:padding="15dp"
+        android:background="@drawable/btn_yellow_rounded"
+        android:textColor="#2D4F2B"
         android:fontFamily="sans-serif-medium"
-        android:textAllCaps="false" />
+        android:textAllCaps="false"
+        android:elevation="2dp" />
+
     <Button
         android:id="@+id/btnSave"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="✅ ثبت مناسبت"
-        android:layout_marginTop="12dp"
-        android:background="@drawable/btn_register_rounded"
-        android:textColor="#FFFFFF"
+        android:layout_marginTop="14dp"
+        android:background="@drawable/btn_deepgreen_rounded"
+        android:textColor="#FFF1CA"
         android:fontFamily="sans-serif-medium"
         android:textAllCaps="false"
-        android:padding="14dp"/>
-
+        android:padding="15dp"
+        android:elevation="3dp"/>
 </LinearLayout>
