@@ -23,7 +23,7 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_margin="28dp"
-        android:background="@drawable/btn_yellow_rounded"
+        android:background="@drawable/btn_green_rounded"
         android:textColor="#000000"
         android:paddingLeft="36dp"
         android:paddingRight="36dp"
