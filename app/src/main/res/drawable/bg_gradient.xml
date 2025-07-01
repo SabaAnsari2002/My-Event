@@ -4,10 +4,8 @@
         <shape android:shape="rectangle">
             <gradient
                 android:type="linear"
-                android:angle="270"
-                android:startColor="#FFF1CA"
-                android:centerColor="#FFB823"
-                android:endColor="#708A58"/>
+                android:startColor="#FEF3E2"
+                android:endColor="#FEF3E2"/>
         </shape>
     </item>
 </layer-list>
