@@ -22,7 +22,7 @@ class NotificationReceiver : BroadcastReceiver() {
         val notification = NotificationCompat.Builder(context, "event_channel")
             .setContentTitle("یادآوری مناسبت")
             .setContentText(title)
-            .setSmallIcon(android.R.drawable.ic_dialog_info)
+            .setSmallIcon(R.drawable.icon1)
             .setAutoCancel(true)
             .build()
 
