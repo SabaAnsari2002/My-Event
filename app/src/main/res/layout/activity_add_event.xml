@@ -16,7 +16,7 @@
         android:textColorHint="#606676"
         android:textSize="17sp"
         android:layout_marginBottom="18dp"
-        android:fontFamily="sans-serif" />
+        android:fontFamily="@font/danafanumregular" />
 
     <Button
         android:id="@+id/btnSelectDate"
@@ -27,7 +27,7 @@
         android:padding="15dp"
         android:background="@drawable/btn_green_rounded"
         android:textColor="#2D4F2B"
-        android:fontFamily="sans-serif-medium"
+        android:fontFamily="@font/danafanumregular"
         android:textAllCaps="false"
         android:elevation="2dp" />
 
@@ -40,7 +40,7 @@
         android:padding="15dp"
         android:background="@drawable/btn_green_rounded"
         android:textColor="#2D4F2B"
-        android:fontFamily="sans-serif-medium"
+        android:fontFamily="@font/danafanumregular"
         android:textAllCaps="false"
         android:elevation="2dp" />
 
@@ -52,7 +52,7 @@
         android:layout_marginTop="20dp"
         android:background="@drawable/btn_deepgreen_rounded"
         android:textColor="#FFF1CA"
-        android:fontFamily="sans-serif-medium"
+        android:fontFamily="@font/danafanumregular"
         android:textAllCaps="false"
         android:padding="15dp"
         android:elevation="3dp"/>

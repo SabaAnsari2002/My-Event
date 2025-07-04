@@ -19,7 +19,7 @@
         android:textColor="#FEF3E2"
         android:gravity="right|center_vertical"
         android:textAlignment="viewStart"
-        android:fontFamily="sans-serif-medium"
+        android:fontFamily="@font/danafanumregular"
         android:maxLines="2"
         android:ellipsize="end"
         android:paddingStart="8dp"
@@ -36,7 +36,7 @@
         android:textColor="#FEF3E2"
         android:gravity="left|center_vertical"
         android:textAlignment="viewEnd"
-        android:fontFamily="sans-serif"
+        android:fontFamily="@font/danafanumregular"
         android:paddingStart="8dp"
         android:paddingEnd="8dp"
         tools:ignore="RtlCompat" />
