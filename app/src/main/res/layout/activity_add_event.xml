@@ -1,59 +1,78 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="28dp"
     android:background="@drawable/bg_gradient">
 
-    <EditText
-        android:id="@+id/etEventTitle"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="نام مناسبت"
-        android:background="@drawable/edittext_rounded"
-        android:padding="18dp"
-        android:textColor="#2D4F2B"
-        android:textColorHint="#606676"
-        android:textSize="17sp"
-        android:layout_marginBottom="18dp"
-        android:fontFamily="@font/danafanumregular" />
+        android:orientation="vertical"
+        android:padding="28dp">
 
-    <Button
-        android:id="@+id/btnSelectDate"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="📅 انتخاب تاریخ"
-        android:layout_marginBottom="12dp"
-        android:padding="15dp"
-        android:background="@drawable/btn_green_rounded"
-        android:textColor="#2D4F2B"
-        android:fontFamily="@font/danafanumregular"
-        android:textAllCaps="false"
-        android:elevation="2dp" />
+        <TextView
+            android:id="@+id/addEventTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="افزودن مناسبت"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="#708871"
+            android:layout_marginBottom="16dp"
+            android:fontFamily="@font/danafanumbold"
+            android:layout_gravity="center_horizontal"
+            android:textAlignment="center" />
 
-    <Button
-        android:id="@+id/btnSelectTime"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="⏰ انتخاب زمان"
-        android:layout_marginBottom="12dp"
-        android:padding="15dp"
-        android:background="@drawable/btn_green_rounded"
-        android:textColor="#2D4F2B"
-        android:fontFamily="@font/danafanumregular"
-        android:textAllCaps="false"
-        android:elevation="2dp" />
 
-    <Button
-        android:id="@+id/btnSave"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="✅ ثبت مناسبت"
-        android:layout_marginTop="20dp"
-        android:background="@drawable/btn_deepgreen_rounded"
-        android:textColor="#FFF1CA"
-        android:fontFamily="@font/danafanumregular"
-        android:textAllCaps="false"
-        android:padding="15dp"
-        android:elevation="3dp"/>
-</LinearLayout>
+        <EditText
+            android:id="@+id/etEventTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="نام مناسبت"
+            android:background="@drawable/edittext_rounded"
+            android:padding="18dp"
+            android:textColor="#2D4F2B"
+            android:textColorHint="#606676"
+            android:textSize="17sp"
+            android:layout_marginBottom="18dp"
+            android:fontFamily="@font/danafanumregular" />
+
+        <Button
+            android:id="@+id/btnSelectDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="📅 انتخاب تاریخ"
+            android:layout_marginBottom="12dp"
+            android:padding="15dp"
+            android:background="@drawable/btn_green_rounded"
+            android:textColor="#2D4F2B"
+            android:fontFamily="@font/danafanumregular"
+            android:textAllCaps="false"
+            android:elevation="2dp" />
+
+        <Button
+            android:id="@+id/btnSelectTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="⏰ انتخاب زمان"
+            android:layout_marginBottom="12dp"
+            android:padding="15dp"
+            android:background="@drawable/btn_green_rounded"
+            android:textColor="#2D4F2B"
+            android:fontFamily="@font/danafanumregular"
+            android:textAllCaps="false"
+            android:elevation="2dp" />
+
+        <Button
+            android:id="@+id/btnSave"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="✅ ثبت مناسبت"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/btn_deepgreen_rounded"
+            android:textColor="#FFF1CA"
+            android:fontFamily="@font/danafanumregular"
+            android:textAllCaps="false"
+            android:padding="15dp"
+            android:elevation="3dp"/>
+    </LinearLayout>
+</ScrollView>
